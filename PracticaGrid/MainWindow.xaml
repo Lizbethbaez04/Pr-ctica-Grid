@@ -1,0 +1,28 @@
+﻿<Window x:Class="PracticaGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticaGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--Se tiene que definir columnas y para que no se sobreponga la informacion, se tiene que especificar en qué columna quieres la informacion-->
+    <Grid>
+        <!-- Definicion de columnas-->
+        <Grid.ColumnDefinitions>
+        <!-- Cada Column Definition es una nueva columna, cada columna debe establecer anchura. Las columnas se empiezan a contar desde 0 como los arreglos-->
+            <!--El modo auto se basa en el texto dentro del boton-->
+            <!--El * sirve para ordenarle que rellene el espacio vacio-->
+            <ColumnDefinition  Width="3*"/>
+            <ColumnDefinition  Width="2*"/>
+            <ColumnDefinition  Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Right">Boton Uno</Button>
+        <Button Grid.Column="1">Boton Dos</Button>
+        <Button Grid.Column="2" Grid.Row="1">Boton Tres</Button>
+    </Grid>
+</Window>
